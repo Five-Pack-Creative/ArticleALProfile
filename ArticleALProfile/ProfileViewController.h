@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  ProfileViewController.h
 //  ArticleALProfile
 //
 //  Created by Jerry Beers on 4/8/15.
@@ -8,8 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface ProfileViewController : UIViewController
 
 @end
 
