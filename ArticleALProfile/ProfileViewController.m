@@ -8,6 +8,15 @@
 
 #import "ProfileViewController.h"
 
+@interface ProfileViewController ()
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@end
+
 @implementation ProfileViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    self.nameLabel.text = @"Somereallysuperlongname Thatwontfit";
+}
 
 @end

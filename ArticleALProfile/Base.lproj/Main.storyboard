@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YN2-2X-0Ek">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D131" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YN2-2X-0Ek">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -25,7 +26,7 @@
         <!--Profile-->
         <scene sceneID="BEw-QR-NM7">
             <objects>
-                <viewController id="AHx-Zm-xH1" sceneMemberID="viewController">
+                <viewController id="AHx-Zm-xH1" customClass="ProfileViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Bec-DQ-eMM"/>
                         <viewControllerLayoutGuide type="bottom" id="3hP-h7-gyl"/>
@@ -104,9 +105,29 @@
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P4B-Ri-QbX" userLabel="Banner View">
                                 <rect key="frame" x="0.0" y="64" width="600" height="80"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City, State" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9XN-Zn-yeE">
+                                        <rect key="frame" x="30" y="40" width="62" height="16"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uoj-10-3Uh">
+                                        <rect key="frame" x="30" y="19" width="46" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="9XN-Zn-yeE" firstAttribute="leading" secondItem="uoj-10-3Uh" secondAttribute="leading" id="1nF-pD-SZE"/>
+                                    <constraint firstItem="uoj-10-3Uh" firstAttribute="bottom" secondItem="P4B-Ri-QbX" secondAttribute="centerY" id="U1A-1P-4Mn"/>
                                     <constraint firstAttribute="height" constant="80" id="gHN-gN-br9"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="9XN-Zn-yeE" secondAttribute="trailing" constant="20" symbolic="YES" id="gjr-po-BuN"/>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uoj-10-3Uh" secondAttribute="trailing" constant="20" symbolic="YES" id="uRg-pe-5ET"/>
+                                    <constraint firstItem="9XN-Zn-yeE" firstAttribute="top" secondItem="uoj-10-3Uh" secondAttribute="bottom" id="ujH-Xf-YUb"/>
+                                    <constraint firstItem="uoj-10-3Uh" firstAttribute="leading" secondItem="P4B-Ri-QbX" secondAttribute="leading" constant="30" id="wuJ-ff-w3J"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -122,6 +143,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Profile" id="Sic-wf-SWU"/>
+                    <connections>
+                        <outlet property="nameLabel" destination="uoj-10-3Uh" id="UYi-Fw-OD5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NVf-Oh-2dH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
