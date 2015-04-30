@@ -102,6 +102,10 @@
                                     <constraint firstItem="RNO-Aw-4LU" firstAttribute="top" secondItem="ls0-PJ-QBr" secondAttribute="bottom" constant="150" id="vVP-4X-W70"/>
                                     <constraint firstItem="ls0-PJ-QBr" firstAttribute="top" secondItem="uOm-cv-1FH" secondAttribute="bottom" constant="150" id="wFz-fg-GZD"/>
                                 </constraints>
+                                <inset key="scrollIndicatorInsets" minX="0.0" minY="80" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <outlet property="delegate" destination="AHx-Zm-xH1" id="VJi-1f-Ii6"/>
+                                </connections>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P4B-Ri-QbX" userLabel="Banner View">
                                 <rect key="frame" x="0.0" y="64" width="600" height="80"/>
@@ -119,7 +123,8 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="X1D-cV-Nue">
-                                        <rect key="frame" x="-38" y="10" width="60" height="60"/>
+                                        <rect key="frame" x="-60" y="10" width="60" height="60"/>
+                                        <color key="backgroundColor" red="0.52549019610000003" green="0.77647058820000003" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="X1D-cV-Nue" secondAttribute="height" multiplier="1:1" id="fRn-ex-odr"/>
                                             <constraint firstAttribute="width" constant="60" id="xFX-lK-Vbp"/>
@@ -128,15 +133,18 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstItem="uoj-10-3Uh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="X1D-cV-Nue" secondAttribute="trailing" constant="8" symbolic="YES" id="1n4-Rf-oot"/>
                                     <constraint firstItem="9XN-Zn-yeE" firstAttribute="leading" secondItem="uoj-10-3Uh" secondAttribute="leading" id="1nF-pD-SZE"/>
+                                    <constraint firstItem="X1D-cV-Nue" firstAttribute="leading" relation="lessThanOrEqual" secondItem="P4B-Ri-QbX" secondAttribute="leading" constant="10" id="GhN-hZ-XFz"/>
                                     <constraint firstItem="uoj-10-3Uh" firstAttribute="bottom" secondItem="P4B-Ri-QbX" secondAttribute="centerY" id="U1A-1P-4Mn"/>
-                                    <constraint firstItem="uoj-10-3Uh" firstAttribute="leading" secondItem="X1D-cV-Nue" secondAttribute="trailing" constant="8" symbolic="YES" id="UnB-40-Fto"/>
+                                    <constraint firstItem="uoj-10-3Uh" firstAttribute="leading" secondItem="X1D-cV-Nue" secondAttribute="trailing" priority="998" constant="8" symbolic="YES" id="UnB-40-Fto"/>
                                     <constraint firstAttribute="centerY" secondItem="X1D-cV-Nue" secondAttribute="centerY" id="WXb-Cd-hL8"/>
                                     <constraint firstAttribute="height" constant="80" id="gHN-gN-br9"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="9XN-Zn-yeE" secondAttribute="trailing" constant="20" symbolic="YES" id="gjr-po-BuN"/>
+                                    <constraint firstItem="X1D-cV-Nue" firstAttribute="trailing" secondItem="P4B-Ri-QbX" secondAttribute="leading" priority="999" id="ru0-cp-Og6"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uoj-10-3Uh" secondAttribute="trailing" constant="20" symbolic="YES" id="uRg-pe-5ET"/>
                                     <constraint firstItem="9XN-Zn-yeE" firstAttribute="top" secondItem="uoj-10-3Uh" secondAttribute="bottom" id="ujH-Xf-YUb"/>
-                                    <constraint firstItem="uoj-10-3Uh" firstAttribute="leading" secondItem="P4B-Ri-QbX" secondAttribute="leading" constant="30" id="wuJ-ff-w3J"/>
+                                    <constraint firstItem="uoj-10-3Uh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="P4B-Ri-QbX" secondAttribute="leading" constant="30" id="wuJ-ff-w3J"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -154,6 +162,7 @@
                     <navigationItem key="navigationItem" title="Profile" id="Sic-wf-SWU"/>
                     <connections>
                         <outlet property="nameLabel" destination="uoj-10-3Uh" id="UYi-Fw-OD5"/>
+                        <outlet property="thumbnailHorizontalConstraint" destination="ru0-cp-Og6" id="jgn-CH-deG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NVf-Oh-2dH" userLabel="First Responder" sceneMemberID="firstResponder"/>
